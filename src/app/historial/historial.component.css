@@ -1,0 +1,40 @@
+.principal{
+    display: flex;
+    height: 80vh;
+}
+
+#container{
+    border: 1px solid black;
+    width: 100%;
+    border-radius: 5px;
+    overflow: auto;
+    box-shadow: 0px 0px 10px black;
+}
+
+.item{
+    width: 80%;
+    height: 200px;
+    margin: 10px 10% 20px 10%;
+    border-radius: 10px;
+    background-color: rgb(235, 235, 235);
+    box-shadow: 5px 5px 5px black;
+    font-size: 5%;
+    display: flex;
+}
+
+#seccion{
+    width: 25%;
+}
+
+
+.title{
+    width: 180px;
+    background-color: white;
+    position: fixed;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.item:nth-child(2){
+    margin-top: 60px;
+}

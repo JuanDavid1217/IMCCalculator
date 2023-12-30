@@ -1,0 +1,28 @@
+<div class="principal">
+    <div id="container">
+        <div class="title">
+            Tus Avances
+        </div>
+        <div class="item" *ngFor="let item of items">
+            <div id="seccion">
+                Datos
+                <div>Peso: {{item.peso}} {{item.tipoPeso}}</div>
+                <div>Altura: {{item.altura}} {{item.tipoAltura}}</div>
+            </div>
+            <div id="seccion">
+                Hábitos
+                <div>Estilo: {{item.vida}}</div>
+                <div>Comida: {{item.comida}}</div>
+            </div>
+            <div id="seccion">
+                Resultados
+                <div>IMC: {{item.imc.toFixed(4)}}</div>
+                <div>Estado: ...</div>
+            </div>
+            <div id="seccion">
+                Fecha:
+                <div>{{item.fecha}}</div>
+            </div>
+        </div>
+    </div>
+</div>

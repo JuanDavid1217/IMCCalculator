@@ -1,0 +1,23 @@
+<div class="bar">
+    <div class="container">
+        <div class="hamburguer" (click)="onVisible()" *ngIf="login">
+            <div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="location">{{locacion}}</div>
+        <div class="state" (click)="loginAndLogout()">{{opcion}}</div>
+    </div>
+</div>
+<div class="position">
+    <div class="options" *ngIf="visible">
+        <div class="option" (click)="navegar(1)">Perfil</div>
+        <div class="option" (click)="navegar(2)">Calculadora</div>
+        <div class="option" (click)="navegar(3)">Historial</div>
+    </div>
+    <div class="body-container">
+        <router-outlet></router-outlet>
+    </div>
+</div>

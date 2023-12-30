@@ -1,0 +1,49 @@
+<div class="principal">
+<div id="container">
+    <form (submit)="calcular()">
+        <div id="title">
+            Calcula tu Índice de Masa Corporal (IMC)
+        </div>
+        <div class="data">
+            <div class="etiquetas">
+                <div>
+                    <label>Peso:</label>
+                </div>
+                <div>
+                    <label>Altura:</label>
+                </div>
+            </div>
+            <div class="entradas">
+                <div>
+                    <input type="number" [(ngModel)]="peso" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div>
+                    <input type="number" [(ngModel)]="altura" [ngModelOptions]="{standalone: true}">
+                </div>
+            </div>
+        </div>
+        <div class="button-position">
+            <button type="submit">Calcular</button>
+        </div>
+    </form>
+    <div class="opciones">
+        <div>
+            <label for="internacional">
+                <input #radio1 id="internacional" type="radio" value=1 name="tipoEntrada" checked (change)="onChange(radio1.value)"> Internacional
+            </label>
+        </div>
+        <div>
+            <label for="anglosajon">
+                <input #radio2 id="anglosajon" type="radio" value=2 name="tipoEntrada" (change)="onChange(radio2.value)"> Anglosajón
+            </label>
+        </div>
+        <div class="results">
+            <div>
+                <div>Clasificación</div>
+                <div>IMC: {{imc.toFixed(4)}}</div>
+                <div>Estado: {{estado}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

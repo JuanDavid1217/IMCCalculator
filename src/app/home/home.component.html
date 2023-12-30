@@ -1,0 +1,62 @@
+<div class="principal">
+    <div id="container">
+        <form>
+            <div id="title">
+                Tu Perfil
+            </div>
+            <div class="data">
+                <div class="etiquetas">
+                    <div class="entrada">
+                        <label>Usuario:</label>
+                    </div>
+                    <div class="entrada">
+                        <label>Edad:</label>
+                    </div>
+                    <div class="entrada">
+                        <label>Alimentación:</label>
+                    </div>
+                    <div class="entrada">
+                        <label>Estilo de vida:</label>
+                    </div>
+                </div>
+                <div class="entradas">
+                    <div>
+                        <input type="text" [(ngModel)]="nombre" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div>
+                        <input type="number" [(ngModel)]="edad" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div>
+                        <select id="select-box" class="select-box" [(ngModel)]="Aoption" [ngModelOptions]="{standalone: true}">
+                            <option value=1>Buena</option>
+                            <option value=2>Regular</option>
+                            <option value=3>Mala</option>
+                          </select>
+                    </div>
+                    <div>
+                        <select id="select-box" class="select-box" [(ngModel)]="Voption" [ngModelOptions]="{standalone: true}">
+                            <option value=1>Activo</option>
+                            <option value=2>Sedentario</option>
+                          </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="opciones">
+            <div>
+                <label for="masculino">
+                    <input #radio1 id="masculino" type="radio" name="tipoEntrada" value=1 checked (change)="onChangeSexo(radio1.value)"> Masculino
+                </label>
+            </div>
+            <div>
+                <label for="femenino">
+                    <input #radio2 id="femenino" type="radio" name="tipoEntrada" value=2 (change)="onChangeSexo(radio2.value)"> Femenino
+                </label>
+            </div>
+            <br>
+            <div class="button-position">
+                <button (click)="actualizar()">Actualizar</button>
+            </div>
+        </div>
+    </div>
+    </div>

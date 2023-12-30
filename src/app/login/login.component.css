@@ -1,0 +1,31 @@
+.container{
+    border-radius: 15px;
+    width: 100%;
+    height: 555px;
+    background-color: black;
+    /*background: linear-gradient(45deg, #050505, #d0dbd0, #050505);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px black;
+}
+
+img{
+    border-radius: 15px;
+    width: auto;
+    height: 555px;
+    margin-left: 15px;
+}
+
+.message{
+    color: white;
+    text-align: center;
+}
+
+button{
+    width: 20%;
+}
+
+button:hover{
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
